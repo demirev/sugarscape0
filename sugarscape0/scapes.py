@@ -143,11 +143,11 @@ class BaseScape(ScapeSkeleotn):
             self.agent_map[target_space] = 1
         
         # change offer prices ----
-        if action.price_spice is not None:
-            agent.update_price('spice', action.price_spice)
+        if action.spice_price_change is not None:
+            agent.update_price('spice', action.spice_price_change)
 
-        if action.price_sugar is not None:
-            agent.update_price('sugar', action.price_spice)
+        if action.sugar_price_change is not None:
+            agent.update_price('sugar', action.sugar_price_change)
 
         # change stance ----
         target_stance = action.stance
